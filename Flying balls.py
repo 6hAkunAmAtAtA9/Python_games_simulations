@@ -3,7 +3,7 @@ import pygame, sys, math, random
 pygame.init()
 clock = pygame.time.Clock()
 WIDTH, HEIGHT = 1000, 800
-COLORS = ['yellow', 'lime', 'aqua', 'white', 'royalblue', 'pink', 'lightsalmon', 'lightcyan', 'springgreen' ]
+COLORS = ['yellow', 'aqua', 'white', 'royalblue', 'pink', 'lightsalmon', 'lightcyan', 'springgreen' ]
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 dots = []
@@ -21,8 +21,8 @@ while True:
         random_colors = [random.choice(COLORS) for _ in range(3)]
         for _ in range(50):
             dots.append({'x': random_position[0], 'y': random_position[1],
-                         'x_change': random.choice([-1, -0.5, 0.5,  1]),
-                         'y_change': random.choice([-1, -0.5, 0.5,  1]),
+                         'x_change': random.uniform(-1, 1),
+                         'y_change': random.uniform(-1, 1),
                          'size': random.randint(1, 10),
                          "speed_x": random.uniform(0.2, 0.5),
                          "speed_y": random.uniform(0.2, 0.5),
