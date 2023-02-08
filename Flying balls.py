@@ -43,7 +43,7 @@ while True:
             pygame.draw.circle(screen, dot['color'], tail_elem, dot['size'] - closeness, dot['size'] // 2)
         dot['life_time'] += 1
 
-    dots = [x for x in dots if (WIDTH >= x['x'] >= 0) and (HEIGHT >= x['y'] >= 0)]
+    dots = [x for x in dots if x['y'] < (HEIGHT + 500)]
     pygame.display.flip()
     timer += 1
     clock.tick(120)
