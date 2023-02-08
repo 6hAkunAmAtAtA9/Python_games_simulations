@@ -37,7 +37,7 @@ while True:
                 del dot['tail'][0]
             dot['tail'].append((dot['x'], dot['y']))
         dot['x'] += dot['x_change'] * dot['speed_x']
-        dot['y'] += dot['y_change'] * dot['speed_y']
+        dot['y'] += dot['y_change'] * dot['speed_y'] + dot['life_time'] / 1500
         pygame.draw.circle(screen, dot['color'], (dot['x'], dot['y']), dot['size'], dot['size'] // 2)
         for closeness, tail_elem in enumerate(dot['tail'][::-1]):
             pygame.draw.circle(screen, dot['color'], tail_elem, dot['size'] - closeness, dot['size'] // 2)
