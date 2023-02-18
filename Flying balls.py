@@ -2,8 +2,8 @@ import pygame, sys, math, random
 
 pygame.init()
 clock = pygame.time.Clock()
-WIDTH, HEIGHT = 1900, 1000
-COLORS = ['yellow', 'aqua', 'white', 'royalblue', 'pink', 'lightsalmon', 'lightcyan', 'springgreen' ]
+WIDTH, HEIGHT = 1200, 800
+COLORS = ['lightblue', 'aqua', 'white', 'royalblue', 'pink', 'lightsalmon', 'lightcyan', 'springgreen', 'lemonchiffon' ]
 
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 dots = []
@@ -15,7 +15,7 @@ def bubbles(x, y):
         dots.append({'x': x, 'y': y,
                      'x_change': random.uniform(-1, 1),
                      'y_change': random.uniform(-1, 1),
-                     'size': random.randint(1, 10),
+                     'size': random.randint(1, 9),
                      "speed_x": random.uniform(0.2, 0.5),
                      "speed_y": random.uniform(0.2, 0.5),
                      'color': random.choice(random_colors),
