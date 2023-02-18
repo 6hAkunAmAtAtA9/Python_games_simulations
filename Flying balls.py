@@ -11,7 +11,7 @@ timer = 0
 
 def bubbles(x, y):
     random_colors = [random.choice(COLORS) for _ in range(3)]
-    for _ in range(50):
+    for _ in range(25):
         dots.append({'x': x, 'y': y,
                      'x_change': random.uniform(-1, 1),
                      'y_change': random.uniform(-1, 1),
@@ -33,7 +33,7 @@ while True:
             position_x, position_y = pygame.mouse.get_pos()
             bubbles(position_x, position_y)
 
-    if timer % 100 == 0 and len(dots) < 500:
+    if timer % 150 == 0 and len(dots) < 500:
         random_position = (random.randint(0, WIDTH), random.randint(0, HEIGHT))
         bubbles(*random_position)
 
